@@ -22,10 +22,16 @@ class _InputPageState extends State<InputPage> {
       maleCardColour = maleCardColour == inactiveCardColour
           ? activeCardColour
           : inactiveCardColour;
+      if (maleCardColour == activeCardColour) {
+        femaleCardColour = inactiveCardColour;
+      }
     } else {
       femaleCardColour = femaleCardColour == inactiveCardColour
           ? activeCardColour
           : inactiveCardColour;
+      if (femaleCardColour == activeCardColour) {
+        maleCardColour = inactiveCardColour;
+      }
     }
   }
 
